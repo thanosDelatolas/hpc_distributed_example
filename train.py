@@ -164,8 +164,6 @@ def main():
     world_size = int(os.environ['WORLD_SIZE'])
     multi_node_setup()
     print(f'local_rank: {local_rank}, global_rank: {global_rank}, world_size:{world_size}')
-
-    torch.cuda.set_device(local_rank)
     seed_everything()
 
     try: 
